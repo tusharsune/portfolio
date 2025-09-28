@@ -7,4 +7,5 @@ dj-database-url==3.0.1
 psycopg2-binary==2.9.9   # only if you plan PostgreSQL, else remove
 sqlparse==0.5.3
 asgiref==3.8.1
-Pillow==10.1.1
+Pillow==10.4.0
+
