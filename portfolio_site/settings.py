@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/5.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.2/ref/settings/
 """
-
+import os
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -26,7 +26,8 @@ SECRET_KEY = 'django-insecure-5lgjke^tj(!wz!^(8q#s0(q_t=e@jxhr7ai+72x7egsq4*uy)(
 DEBUG = os.environ.get('DJANGO_DEBUG', '') != 'False'
 
 
-ALLOWED_HOSTS = ["127.0.0.1", "localhost", "tushar24.me"]
+# ALLOWED_HOSTS = ["127.0.0.1", "localhost", "tushar24.me"]
+ALLOWED_HOSTS = os.environ.get('DJANGO_ALLOWED_HOSTS', 'portfolio.onrender.com,tushar24.me').split(',')
 
 
 
@@ -128,7 +129,6 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-import os
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 STATIC_URL = '/static/'
@@ -142,4 +142,5 @@ MEDIA_ROOT = BASE_DIR / 'media'
 # allow all origins for dev (adjust in prod)
 # CORS_ORIGIN_ALLOW_ALL = True
 CORS_ORIGIN_ALLOW_ALL = False
+
 
