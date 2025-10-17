@@ -27,7 +27,7 @@ DEBUG = os.environ.get('DJANGO_DEBUG', '') != 'False'
 
 
 # ALLOWED_HOSTS = ["127.0.0.1", "localhost", "tushar24.me"]
-ALLOWED_HOSTS = os.environ.get('DJANGO_ALLOWED_HOSTS', 'portfolio-d14i.onrender.com,tushar24.me').split(',')
+ALLOWED_HOSTS = os.environ.get('DJANGO_ALLOWED_HOSTS', 'portfolio-d14i.onrender.com,tushar24.me','www.tushar24.me').split(',')
 
 
 
@@ -142,6 +142,7 @@ MEDIA_ROOT = BASE_DIR / 'media'
 # allow all origins for dev (adjust in prod)
 # CORS_ORIGIN_ALLOW_ALL = True
 CORS_ORIGIN_ALLOW_ALL = False
+
 
 
 
